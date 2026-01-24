@@ -1,3 +1,4 @@
+/* Armstrong Number */
 #include <stdio.h>
 
 int main()
