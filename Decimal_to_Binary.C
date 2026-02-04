@@ -1,32 +1,35 @@
+/* Decimal to Binary Conversion */
+
 #include <stdio.h>
+
+int binary(int a){
+    
+    int digit, temp=0;
+    
+    while (a != 0)
+    {
+        digit = a%2;
+        temp = temp*10 + digit;
+        a = a/2;
+    }
+    return temp;
+}
 
 int main()
 {
-    int no, i=0, number, count=0, n;
-    printf("Enter the Number:");
-    scanf("%d", &no);
+    int no, digit=0, ans=0, temp;
     
-    while (i >= 0)
+    printf("Enter the number");
+    scanf("%d",&no);
+    
+    temp = binary(no);
+    
+    while (temp != 0)
     {
-        number = i;
-        while (number != 0){
-            if(number%10 == 0 || number%10 == 1){
-                number = number/10;
-                
-                if (number == 0)
-                    count++;
-                    
-            }else{
-                break;
-            }
-        }
-        
-        if(count == no){
-            printf("Binary value of %d is %d", no, i);
-            break;
-        }
-        
-        i++;
+        digit = temp%10;
+        ans = ans*10 + digit;
+        temp = temp/10;
     }
+    printf("%d",ans);
     return 0;
 }
