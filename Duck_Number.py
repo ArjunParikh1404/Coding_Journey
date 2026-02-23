@@ -1,10 +1,9 @@
-def is_duck_number(num: int) -> bool:
-    num_str = str(num)
-    return '0' in num_str and not num_str.startswith('0')
+# Program to check whether a given number is a Duck Number.
+# A Duck Number is a number that contains at least one 0 but does not start with 0.
 
-# Example usage
-number = int(input("Enter a number: "))
-if is_duck_number(number):
-    print("Duck Number")
+num = input("Enter the number: ").strip()
+
+if num and '0' in num and not num.startswith('0'):
+    print("Number is a Duck Number")
 else:
-    print("Not a Duck Number")
+    print("Number is not a Duck Number")
