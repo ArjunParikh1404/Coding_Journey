@@ -13,7 +13,6 @@ def isAP(arr):
             return False
     return True
 
-
 # Taking input from user
 arr = list(map(int, input("Enter numbers separated by space: ").split()))
 
