@@ -7,7 +7,8 @@ divisors = []
 for i in range(1, no):
     if no % i == 0:
         divisors.append(i)
-        
+
+
 total = sum(divisors)
 
 if total > no:
