@@ -1,5 +1,4 @@
 # Password Strength Checker
-
 import re
 
 def check_pass(passwd):
