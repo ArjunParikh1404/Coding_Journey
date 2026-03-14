@@ -40,3 +40,35 @@ print("\nMatrix Multiplication (A @ B):")
 print(matrix_mult)
 
 print(rank_A)
+
+
+# Transpose
+transpose_A = A.T
+print("\nTranspose of A:")
+print(transpose_A)
+
+
+# Determinant
+det_A = np.linalg.det(A)
+print("\nDeterminant of A:")
+print(det_A)
+
+
+# Inverse
+inverse_A = np.linalg.inv(A)
+print("\nInverse of A:")
+print(inverse_A)
+
+
+# Eigenvalues and Eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(A)
+print("\nEigenvalues of A:")
+print(eigenvalues)
+
+print("\nEigenvectors of A:")
+print(eigenvectors)
+
+
+# Rank
+rank_A = np.linalg.matrix_rank(A)
+print("\nRank of A:")
