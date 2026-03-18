@@ -39,8 +39,6 @@ matrix_mult = np.dot(A, B)
 print("\nMatrix Multiplication (A @ B):")
 print(matrix_mult)
 
-print(rank_A)
-
 
 # Transpose
 transpose_A = A.T
@@ -72,3 +70,24 @@ print(eigenvectors)
 # Rank
 rank_A = np.linalg.matrix_rank(A)
 print("\nRank of A:")
+print(rank_A)
+
+
+# Linear System
+b = np.array([1, 2])
+
+solution = np.linalg.solve(A, b)
+print("\nSolution to Ax = b:")
+print(solution)
+
+
+# Trace (Sum of Diagonal)
+trace_A = np.trace(A)
+print("\nTrace of A:")
+print(trace_A)
+
+
+# Symmetric Check 
+is_symmetric = np.array_equal(A, A.T)
+print("\nIs A symmetric?")
+print(is_symmetric)
