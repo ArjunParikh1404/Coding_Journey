@@ -91,3 +91,9 @@ print(trace_A)
 is_symmetric = np.array_equal(A, A.T)
 print("\nIs A symmetric?")
 print(is_symmetric)
+
+
+# Identity Matrix
+I = np.eye(2)
+print("\nIdentity Matrix:")
+print(I)
