@@ -97,3 +97,11 @@ print(is_symmetric)
 I = np.eye(2)
 print("\nIdentity Matrix:")
 print(I)
+
+
+# Zero & Ones Matrix
+print("\nZero Matrix:")
+print(np.zeros((2,2)))
+
+print("\nOnes Matrix:")
+print(np.ones((2,2)))
