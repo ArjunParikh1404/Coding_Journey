@@ -105,3 +105,9 @@ print(np.zeros((2,2)))
 
 print("\nOnes Matrix:")
 print(np.ones((2,2)))
+
+
+# Matrix Norm
+norm_A = np.linalg.norm(A)
+print("\nNorm of A:")
+print(norm_A)
