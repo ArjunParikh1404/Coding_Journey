@@ -111,3 +111,9 @@ print(np.ones((2,2)))
 norm_A = np.linalg.norm(A)
 print("\nNorm of A:")
 print(norm_A)
+
+
+# Condition Number
+cond_A = np.linalg.cond(A)
+print("\nCondition Number of A:")
+print(cond_A)
