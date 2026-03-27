@@ -117,3 +117,9 @@ print(norm_A)
 cond_A = np.linalg.cond(A)
 print("\nCondition Number of A:")
 print(cond_A)
+
+
+# Check Orthogonality
+is_orthogonal = np.allclose(A.T @ A, np.eye(A.shape[0]))
+print("\nIs A orthogonal?")
+print(is_orthogonal)
