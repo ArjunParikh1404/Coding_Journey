@@ -123,3 +123,12 @@ print(cond_A)
 is_orthogonal = np.allclose(A.T @ A, np.eye(A.shape[0]))
 print("\nIs A orthogonal?")
 print(is_orthogonal)
+
+
+# LU / QR Decomposition
+Q, R = np.linalg.qr(A)
+print("\nQ matrix:")
+print(Q)
+
+print("\nR matrix:")
+print(R)
