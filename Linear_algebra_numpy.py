@@ -132,3 +132,9 @@ print(Q)
 
 print("\nR matrix:")
 print(R)
+
+
+# Singular Value Decomposition (SVD)
+U, S, Vt = np.linalg.svd(A)
+print("\nSingular Values:")
+print(S)
