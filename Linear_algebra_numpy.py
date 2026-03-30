@@ -138,3 +138,9 @@ print(R)
 U, S, Vt = np.linalg.svd(A)
 print("\nSingular Values:")
 print(S)
+
+
+# Check if matrix is invertible
+is_invertible = np.linalg.matrix_rank(A) == A.shape[0]
+print("\nIs A invertible?")
+print(is_invertible)
