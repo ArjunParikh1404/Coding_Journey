@@ -144,3 +144,9 @@ print(S)
 is_invertible = np.linalg.matrix_rank(A) == A.shape[0]
 print("\nIs A invertible?")
 print(is_invertible)
+
+
+# Frobenius Inner Product
+inner_product = np.sum(A * B)
+print("\nFrobenius Inner Product of A and B:")
+print(inner_product)
