@@ -35,7 +35,7 @@ print(element_mult)
 
 
 # Matrix Multiplication
-matrix_mult = np.dot(A, B)
+matrix_mult = A @ B
 print("\nMatrix Multiplication (A @ B):")
 print(matrix_mult)
 
@@ -53,9 +53,12 @@ print(det_A)
 
 
 # Inverse
-inverse_A = np.linalg.inv(A)
-print("\nInverse of A:")
-print(inverse_A)
+if np.linalg.det(A) != 0:
+    inverse_A = np.linalg.inv(A)
+    print("\nInverse of A:")
+    print(inverse_A)
+else:
+    print("\nMatrix is singular, no inverse.")
 
 
 # Eigenvalues and Eigenvectors
