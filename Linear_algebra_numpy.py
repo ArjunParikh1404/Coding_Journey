@@ -153,3 +153,9 @@ print(is_invertible)
 inner_product = np.sum(A * B)
 print("\nFrobenius Inner Product of A and B:")
 print(inner_product)
+
+
+# Matrix Power
+power_A = np.linalg.matrix_power(A, 2)
+print("\nA squared:")
+print(power_A)
