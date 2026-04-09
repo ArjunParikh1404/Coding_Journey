@@ -159,3 +159,9 @@ print(inner_product)
 power_A = np.linalg.matrix_power(A, 2)
 print("\nA squared:")
 print(power_A)
+
+
+# Diagonal Extraction
+diag_A = np.diag(A)
+print("\nDiagonal elements of A:")
+print(diag_A)
