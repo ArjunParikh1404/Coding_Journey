@@ -53,7 +53,7 @@ print(det_A)
 
 
 # Inverse
-if np.linalg.det(A) != 0:
+if not np.isclose(det_A, 0):
     inverse_A = np.linalg.inv(A)
     print("\nInverse of A:")
     print(inverse_A)
@@ -91,7 +91,7 @@ print(trace_A)
 
 
 # Symmetric Check 
-is_symmetric = np.array_equal(A, A.T)
+is_symmetric = np.allclose(A, A.T)
 print("\nIs A symmetric?")
 print(is_symmetric)
 
