@@ -165,3 +165,9 @@ print(power_A)
 diag_A = np.diag(A)
 print("\nDiagonal elements of A:")
 print(diag_A)
+
+
+# Create Diagonal Matrix
+diag_matrix = np.diag([1, 2])
+print("\nDiagonal Matrix:")
+print(diag_matrix)
