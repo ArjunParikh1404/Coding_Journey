@@ -171,3 +171,10 @@ print(diag_A)
 diag_matrix = np.diag([1, 2])
 print("\nDiagonal Matrix:")
 print(diag_matrix)
+
+
+# Projection
+v = np.array([1, 1])
+projection = (A @ v)
+print("\nProjection of vector v using A:")
+print(projection)
