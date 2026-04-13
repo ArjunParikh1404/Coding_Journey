@@ -178,3 +178,9 @@ v = np.array([1, 1])
 projection = (A @ v)
 print("\nProjection of vector v using A:")
 print(projection)
+
+
+# Verify Eigen Decomposition
+reconstructed_A = eigenvectors @ np.diag(eigenvalues) @ np.linalg.inv(eigenvectors)
+print("\nReconstructed A from eigen decomposition:")
+print(reconstructed_A)
