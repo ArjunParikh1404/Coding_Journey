@@ -184,3 +184,9 @@ print(projection)
 reconstructed_A = eigenvectors @ np.diag(eigenvalues) @ np.linalg.inv(eigenvectors)
 print("\nReconstructed A from eigen decomposition:")
 print(reconstructed_A)
+
+
+# Rank-nullity insight
+nullity = A.shape[1] - rank_A
+print("\nNullity of A:")
+print(nullity)
