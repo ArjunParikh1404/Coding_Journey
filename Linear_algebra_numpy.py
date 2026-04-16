@@ -173,10 +173,13 @@ print("\nDiagonal Matrix:")
 print(diag_matrix)
 
 
-# Projection
+# Projection of vector v onto vector u
 v = np.array([1, 1])
-projection = (A @ v)
-print("\nProjection of vector v using A:")
+u = np.array([1, 0])  # you can change u to any vector
+
+projection = (np.dot(v, u) / np.dot(u, u)) * u
+
+print("\nProjection of vector v onto u:")
 print(projection)
 
 
