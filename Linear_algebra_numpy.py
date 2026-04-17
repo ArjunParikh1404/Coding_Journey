@@ -185,8 +185,15 @@ print(projection)
 
 # Verify Eigen Decomposition
 reconstructed_A = eigenvectors @ np.diag(eigenvalues) @ np.linalg.inv(eigenvectors)
+
 print("\nReconstructed A from eigen decomposition:")
 print(reconstructed_A)
+
+# Check if reconstruction is accurate (tolerance check)
+is_reconstruction_correct = np.allclose(A, reconstructed_A)
+
+print("\nIs reconstruction accurate?")
+print(is_reconstruction_correct)
 
 
 # Rank-nullity insight
