@@ -202,7 +202,12 @@ print("\nNullity of A:")
 print(nullity)
 
 
-# Check Positive Definiteness
-is_positive_definite = np.all(np.linalg.eigvals(A) > 0)
+# Check Positive Definiteness 
+try:
+    np.linalg.cholesky(A)
+    is_positive_definite = True
+except np.linalg.LinAlgError:
+    is_positive_definite = False
+
 print("\nIs A positive definite?")
 print(is_positive_definite)
