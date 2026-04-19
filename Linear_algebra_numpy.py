@@ -211,3 +211,9 @@ except np.linalg.LinAlgError:
 
 print("\nIs A positive definite?")
 print(is_positive_definite)
+
+
+# Pseudo-Inverse
+pseudo_inv = np.linalg.pinv(A)
+print("\nPseudo-inverse of A:")
+print(pseudo_inv)
