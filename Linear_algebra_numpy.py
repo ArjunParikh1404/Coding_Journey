@@ -217,3 +217,9 @@ print(is_positive_definite)
 pseudo_inv = np.linalg.pinv(A)
 print("\nPseudo-inverse of A:")
 print(pseudo_inv)
+
+
+# Solve Least Squares
+x_ls, residuals, rank, s = np.linalg.lstsq(A, b, rcond=None)
+print("\nLeast squares solution:")
+print(x_ls)
