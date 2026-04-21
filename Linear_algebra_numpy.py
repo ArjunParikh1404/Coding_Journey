@@ -223,3 +223,9 @@ print(pseudo_inv)
 x_ls, residuals, rank, s = np.linalg.lstsq(A, b, rcond=None)
 print("\nLeast squares solution:")
 print(x_ls)
+
+
+# Check Diagonalizable
+is_diagonalizable = np.linalg.matrix_rank(eigenvectors) == A.shape[0]
+print("\nIs A diagonalizable?")
+print(is_diagonalizable)
