@@ -229,3 +229,12 @@ print(x_ls)
 is_diagonalizable = np.linalg.matrix_rank(eigenvectors) == A.shape[0]
 print("\nIs A diagonalizable?")
 print(is_diagonalizable)
+
+
+# Angle Between Vectors
+v1 = np.array([1, 2])
+v2 = np.array([3, 4])
+
+angle = np.arccos(np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2)))
+print("\nAngle between v1 and v2 (radians):")
+print(angle)
