@@ -24,3 +24,20 @@ def gradient(x,y):
 
 print("\nGradient at (3,4):")
 print(gradient(3,4))
+
+
+# Gradient Descent
+# Minimize x²
+
+def grad_descent(start, lr=.1, steps=20):
+    x=start
+
+    for i in range(steps):
+        grad=2*x
+        x=x-lr*grad
+        print(f"Step {i+1}: x={x:.6f}")
+
+    return x
+
+print("\nGradient Descent minimizing x²:")
+minimum=grad_descent(8)
