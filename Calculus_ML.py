@@ -52,3 +52,17 @@ def chain_rule(x):
 
 print("\nChain Rule derivative at x=2")
 print(chain_rule(2))
+
+
+# Jacobian Example
+# F(x,y)= [x²+y , x+y²]
+
+def jacobian(x,y):
+    J=np.array([
+        [2*x,1],
+        [1,2*y]
+    ])
+    return J
+
+print("\nJacobian at (1,2):")
+print(jacobian(1,2))
