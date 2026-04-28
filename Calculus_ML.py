@@ -41,3 +41,14 @@ def grad_descent(start, lr=.1, steps=20):
 
 print("\nGradient Descent minimizing x²:")
 minimum=grad_descent(8)
+
+
+# Chain Rule
+# y=(3x+1)^2
+# dy/dx = 2(3x+1)*3
+
+def chain_rule(x):
+    return 2*(3*x+1)*3
+
+print("\nChain Rule derivative at x=2")
+print(chain_rule(2))
