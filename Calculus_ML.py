@@ -66,3 +66,16 @@ def jacobian(x,y):
 
 print("\nJacobian at (1,2):")
 print(jacobian(1,2))
+
+
+# Taylor Approximation
+# e^x ≈ 1+x+x²/2
+
+x=.5
+
+approx=1+x+(x**2)/2
+actual=np.exp(x)
+
+print("\nTaylor Approximation of e^0.5")
+print("Approx:",approx)
+print("Actual:",actual)
