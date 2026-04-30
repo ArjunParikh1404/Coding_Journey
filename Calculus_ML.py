@@ -79,3 +79,17 @@ actual=np.exp(x)
 print("\nTaylor Approximation of e^0.5")
 print("Approx:",approx)
 print("Actual:",actual)
+
+
+# Convex vs Non-Convex examples
+
+convex=lambda x:x**2
+non_convex=lambda x:x**4-3*x**2
+
+x=1.5
+
+print("\nConvex function x² at x=1.5:")
+print(convex(x))
+
+print("\nNon-convex function x⁴-3x² at x=1.5:")
+print(non_convex(x))
