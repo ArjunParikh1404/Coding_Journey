@@ -93,3 +93,42 @@ print(convex(x))
 
 print("\nNon-convex function x⁴-3x² at x=1.5:")
 print(non_convex(x))
+
+
+# Backpropagation (Single Neuron)
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+def sigmoid_derivative(x):
+    s = sigmoid(x)
+    return s * (1 - s)
+
+# Input, weight, bias
+x = 0.5
+w = 0.8
+b = 0.1
+
+# Target
+y_true = 1
+
+# Forward pass
+z = w * x + b
+y_pred = sigmoid(z)
+
+# Loss (Mean Squared Error)
+loss = (y_pred - y_true)**2
+
+# Backward pass (manual gradients)
+dL_dy = 2 * (y_pred - y_true)
+dy_dz = sigmoid_derivative(z)
+
+dL_dz = dL_dy * dy_dz
+dL_dw = dL_dz * x
+dL_db = dL_dz * 1
+
+print("\nBackpropagation (Single Neuron)")
+print("Prediction:", y_pred)
+print("Loss:", loss)
+print("Gradient w:", dL_dw)
+print("Gradient b:", dL_db)
