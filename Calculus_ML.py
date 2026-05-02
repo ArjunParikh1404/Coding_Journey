@@ -132,3 +132,22 @@ print("Prediction:", y_pred)
 print("Loss:", loss)
 print("Gradient w:", dL_dw)
 print("Gradient b:", dL_db)
+
+
+# Batch Gradient Descent
+
+X = np.array([1, 2, 3, 4])
+y = np.array([2, 4, 6, 8])  # y = 2x
+
+w = 0.0
+lr = 0.01
+
+for epoch in range(10):
+    y_pred = w * X
+    loss = np.mean((y_pred - y)**2)
+
+    grad = np.mean(2 * (y_pred - y) * X)
+
+    w -= lr * grad
+
+    print(f"\nEpoch {epoch+1} | Loss: {loss:.4f} | w: {w:.4f}")
