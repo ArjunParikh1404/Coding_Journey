@@ -151,3 +151,17 @@ for epoch in range(10):
     w -= lr * grad
 
     print(f"\nEpoch {epoch+1} | Loss: {loss:.4f} | w: {w:.4f}")
+
+
+# Stochastic Gradient Descent
+
+w = 0.0
+lr = 0.01
+
+for epoch in range(5):
+    for i in range(len(X)):
+        y_pred = w * X[i]
+        grad = 2 * (y_pred - y[i]) * X[i]
+        w -= lr * grad
+
+    print(f"\nEpoch {epoch+1} | w: {w:.4f}")
