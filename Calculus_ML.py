@@ -165,3 +165,20 @@ for epoch in range(5):
         w -= lr * grad
 
     print(f"\nEpoch {epoch+1} | w: {w:.4f}")
+
+
+# Gradient Descent with Momentum
+
+w = 0.0
+lr = 0.01
+momentum = 0.9
+v = 0
+
+for epoch in range(10):
+    y_pred = w * X
+    grad = np.mean(2 * (y_pred - y) * X)
+
+    v = momentum * v + lr * grad
+    w -= v
+
+    print(f"\nEpoch {epoch+1} | w: {w:.4f}")
