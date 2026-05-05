@@ -182,3 +182,21 @@ for epoch in range(10):
     w -= v
 
     print(f"\nEpoch {epoch+1} | w: {w:.4f}")
+
+
+# Numerical Gradient Checking
+
+def loss_fn(w):
+    return (w * 2 - 4)**2  # simple function
+
+def analytical_grad(w):
+    return 2 * (w * 2 - 4) * 2
+
+def numerical_grad(w, h=1e-5):
+    return (loss_fn(w + h) - loss_fn(w - h)) / (2 * h)
+
+w = 1.0
+
+print("\nGradient Checking")
+print("Analytical Grad:", analytical_grad(w))
+print("Numerical Grad:", numerical_grad(w))
