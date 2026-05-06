@@ -134,6 +134,15 @@ print("Gradient w:", dL_dw)
 print("Gradient b:", dL_db)
 
 
+# Parameter update
+learning_rate = 0.1
+
+w = w - learning_rate * dL_dw
+b = b - learning_rate * dL_db
+
+print("Updated weight:", w)
+print("Updated bias:", b)
+
 # Batch Gradient Descent
 
 X = np.array([1, 2, 3, 4])
