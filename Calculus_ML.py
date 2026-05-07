@@ -143,6 +143,16 @@ b = b - learning_rate * dL_db
 print("Updated weight:", w)
 print("Updated bias:", b)
 
+
+# Forward pass after update
+new_z = w * x + b
+new_y_pred = sigmoid(new_z)
+new_loss = (new_y_pred - y_true)**2
+
+print("\nNew Prediction:", new_y_pred)
+print("New Loss after update:", new_loss)
+
+
 # Batch Gradient Descent
 
 X = np.array([1, 2, 3, 4])
