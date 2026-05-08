@@ -186,6 +186,28 @@ for epoch in range(5):
     print(f"\nEpoch {epoch+1} | w: {w:.4f}")
 
 
+# Mini-Batch Gradient Descent
+
+w = 0.0
+lr = 0.01
+batch_size = 2
+
+for epoch in range(5):
+
+    for i in range(0, len(X), batch_size):
+
+        X_batch = X[i:i+batch_size]
+        y_batch = y[i:i+batch_size]
+
+        y_pred = w * X_batch
+
+        grad = np.mean(2 * (y_pred - y_batch) * X_batch)
+
+        w -= lr * grad
+
+    print(f"\nEpoch {epoch+1} | w: {w:.4f}")
+
+
 # Gradient Descent with Momentum
 
 w = 0.0
