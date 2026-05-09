@@ -241,3 +241,6 @@ w = 1.0
 print("\nGradient Checking")
 print("Analytical Grad:", analytical_grad(w))
 print("Numerical Grad:", numerical_grad(w))
+
+difference = abs(analytical_grad(w) - numerical_grad(w))
+print("Difference:", difference)
