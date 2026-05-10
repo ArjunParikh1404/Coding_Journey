@@ -7,10 +7,10 @@ def derivative(f, x, h=1e-5):
 
 f = lambda x: x**2 + 3*x
 
-x=2
+x_input = 2
 
 print("\nDerivative of f(x)=x²+3x at x=2")
-print(derivative(f,x))
+print(derivative(f,x_input))
 
 
 # Partial Derivatives / Gradient
