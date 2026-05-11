@@ -10,7 +10,7 @@ f = lambda x: x**2 + 3*x
 x_input = 2
 
 print("\nDerivative of f(x)=x²+3x at x=2")
-print(derivative(f,x_input))
+print(derivative(f, x_input))
 
 
 # Partial Derivatives / Gradient
@@ -105,15 +105,15 @@ def sigmoid_derivative(x):
     return s * (1 - s)
 
 # Input, weight, bias
-x = 0.5
-w = 0.8
-b = 0.1
+x_input = 0.5
+weight = 0.8
+bias = 0.1
 
 # Target
 y_true = 1
 
 # Forward pass
-z = w * x + b
+z = weight * x_input + bias
 y_pred = sigmoid(z)
 
 # Loss (Mean Squared Error)
@@ -124,7 +124,7 @@ dL_dy = 2 * (y_pred - y_true)
 dy_dz = sigmoid_derivative(z)
 
 dL_dz = dL_dy * dy_dz
-dL_dw = dL_dz * x
+dL_dw = dL_dz * x_input
 dL_db = dL_dz * 1
 
 print("\nBackpropagation (Single Neuron)")
@@ -133,23 +133,20 @@ print("Loss:", loss)
 print("Gradient w:", dL_dw)
 print("Gradient b:", dL_db)
 
-
 # Parameter update
 learning_rate = 0.1
 
-w = w - learning_rate * dL_dw
-b = b - learning_rate * dL_db
+weight = weight - learning_rate * dL_dw
+bias = bias - learning_rate * dL_db
 
-print("Updated weight:", w)
-print("Updated bias:", b)
-
+print("Updated weight:", weight)
+print("Updated bias:", bias)
 
 # Forward pass after update
-new_z = w * x + b
+new_z = weight * x_input + bias
 new_y_pred = sigmoid(new_z)
 new_loss = (new_y_pred - y_true)**2
 
-print("\nNew Prediction:", new_y_pred)
 print("New Loss after update:", new_loss)
 
 
@@ -158,37 +155,37 @@ print("New Loss after update:", new_loss)
 X = np.array([1, 2, 3, 4])
 y = np.array([2, 4, 6, 8])  # y = 2x
 
-w = 0.0
+weight = 0.0
 lr = 0.01
 
 for epoch in range(10):
-    y_pred = w * X
+    y_pred = weight * X
     loss = np.mean((y_pred - y)**2)
 
     grad = np.mean(2 * (y_pred - y) * X)
 
-    w -= lr * grad
+    weight -= lr * grad
 
-    print(f"\nEpoch {epoch+1} | Loss: {loss:.4f} | w: {w:.4f}")
+    print(f"\nEpoch {epoch+1} | Loss: {loss:.4f} | weight: {weight:.4f}")
 
 
 # Stochastic Gradient Descent
 
-w = 0.0
+weight = 0.0
 lr = 0.01
 
 for epoch in range(5):
     for i in range(len(X)):
-        y_pred = w * X[i]
+        y_pred = weight * X[i]
         grad = 2 * (y_pred - y[i]) * X[i]
-        w -= lr * grad
+        weight -= lr * grad
 
-    print(f"\nEpoch {epoch+1} | w: {w:.4f}")
+    print(f"\nEpoch {epoch+1} | weight: {weight:.4f}")
 
 
 # Mini-Batch Gradient Descent
 
-w = 0.0
+weight = 0.0
 lr = 0.01
 batch_size = 2
 
@@ -199,48 +196,48 @@ for epoch in range(5):
         X_batch = X[i:i+batch_size]
         y_batch = y[i:i+batch_size]
 
-        y_pred = w * X_batch
+        y_pred = weight * X_batch
 
         grad = np.mean(2 * (y_pred - y_batch) * X_batch)
 
-        w -= lr * grad
+        weight -= lr * grad
 
-    print(f"\nEpoch {epoch+1} | w: {w:.4f}")
-
+    print(f"\nEpoch {epoch+1} | weight: {weight:.4f}")
+    
 
 # Gradient Descent with Momentum
 
-w = 0.0
+weight = 0.0
 lr = 0.01
 momentum = 0.9
-v = 0
+velocity = 0
 
 for epoch in range(10):
-    y_pred = w * X
+    y_pred = weight * X
     grad = np.mean(2 * (y_pred - y) * X)
 
-    v = momentum * v + lr * grad
-    w -= v
+    velocity = momentum * velocity + lr * grad
+    weight -= velocity
 
-    print(f"\nEpoch {epoch+1} | w: {w:.4f}")
+    print(f"\nEpoch {epoch+1} | weight: {weight:.4f}")
 
 
 # Numerical Gradient Checking
 
-def loss_fn(w):
-    return (w * 2 - 4)**2  # simple function
+def loss_fn(weight):
+    return (weight * 2 - 4)**2
 
-def analytical_grad(w):
-    return 2 * (w * 2 - 4) * 2
+def analytical_grad(weight):
+    return 2 * (weight * 2 - 4) * 2
 
-def numerical_grad(w, h=1e-5):
-    return (loss_fn(w + h) - loss_fn(w - h)) / (2 * h)
+def numerical_grad(weight, h=1e-5):
+    return (loss_fn(weight + h) - loss_fn(weight - h)) / (2 * h)
 
-w = 1.0
+weight = 1.0
 
 print("\nGradient Checking")
-print("Analytical Grad:", analytical_grad(w))
-print("Numerical Grad:", numerical_grad(w))
+print("Analytical Grad:", analytical_grad(weight))
+print("Numerical Grad:", numerical_grad(weight))
 
-difference = abs(analytical_grad(w) - numerical_grad(w))
+difference = abs(analytical_grad(weight) - numerical_grad(weight))
 print("Difference:", difference)
