@@ -2,16 +2,13 @@
 
 no = int(input("Enter the number"))
 
-i = 0
+step = 0
 
-while True:
-    if no == 0:
-        break
-    elif no % 2 == 0:
+while no != 0:
+    if no % 2 == 0:
         no = no // 2
-        i += 1
     else:
         no -= 1
-        i += 1
+    step += 1
         
-print(f"It takes {i} time to reach zero")
+print(f"It takes {step} time to reach zero")
