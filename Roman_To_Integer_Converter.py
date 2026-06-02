@@ -22,8 +22,14 @@ def roman_to_int(s):
     return total
 
 
-roman_number = input("Enter a Roman numeral: ").upper()
+while True:
+    roman_number = input("Enter a Roman numeral (or Q to quit): ").upper()
 
-result = roman_to_int(roman_number)
+    if roman_number == "Q":
+        print("Goodbye!")
+        break
 
-print("Integer value:", result)
+    result = roman_to_int(roman_number)
+
+    print("Integer value:", result)
+    print()
