@@ -1,5 +1,4 @@
 # This program checks each number in a list and prints whether it has an even or odd number of digits
-
 nums = list(map(int, input("Enter the array: ").split()))
 
 for num in nums:
