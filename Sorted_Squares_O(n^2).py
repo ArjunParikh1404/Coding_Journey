@@ -1,4 +1,4 @@
-# Read integers, square them, and output the sorted squared values
+# Read integers, square them, and output the sorted squared values using Bubble sort technique.
 
 nums = list(map(int,input("Enter the Array : ").split()))
 
