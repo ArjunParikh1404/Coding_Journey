@@ -1,4 +1,5 @@
 # Read integers, square them, and output the sorted squared values using Bubble sort technique.
+# Time Complexity = O(n^2), Space Complexity = O(1)
 
 nums = list(map(int,input("Enter the Array : ").split()))
 
