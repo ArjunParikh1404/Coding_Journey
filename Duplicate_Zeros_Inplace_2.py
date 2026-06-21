@@ -1,4 +1,3 @@
-Emergency code : 
 # Given a fixed-size array, duplicate each zero in-place and shift remaining elements right without exceeding array length.
 # Time Complexity = O(n^2)   Space Complexity = O(1)
 
