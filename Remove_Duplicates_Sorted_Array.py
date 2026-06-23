@@ -1,5 +1,6 @@
 # Given a sorted array, remove duplicates in-place so each value appears once; return k = number of unique elements, and ensure first k positions contain those unique values in order.
 # Time Complexity = O(n), Space Complexity = O(1)
+# Leetcode 26
 
 nums = list(map(int, input("Enter the array : ").split()))
 
