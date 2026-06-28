@@ -1,5 +1,6 @@
 # Read integers, square them, and output the sorted squared values
 # Time Complexity = O(n log n), Space Complexity = O(n)
+# Leetcode - 977
 
 nums = list(map(int,input("Enter the array :").split()))
 
