@@ -1,0 +1,38 @@
+# Traverse the given matrix in clockwise spiral order and return all its elements in the order they are visited.
+# Time Complexity = O(m × n), Space Complexity = O(m × n), Auxiliary Space = O(1)
+# Leetcode = 54
+
+m, n = map(int, input("Enter the total number of rows and cols :").split())
+
+mat = []
+
+print("Enter the Matrix :")
+
+for i in range(m):
+    mat.append(list(map(int, input().split())))
+    
+result = []
+row, col = 0, 0
+boundry = 0
+
+while len(result) < m*n:
+    result.append(mat[row][col])
+    
+    # Right
+    if row == boundry and col != n - 1 - boundry:
+        col += 1
+    # Down
+    elif col == n - 1 - boundry and row != m - 1 - boundry:
+        row += 1
+    # Left
+    elif row == m - 1 - boundry and col != boundry:
+        col -= 1
+    # Up
+    else:
+        if row == boundry + 1:
+            boundry += 1
+            col += 1
+        else:
+            row -= 1
+    
+print(result)
