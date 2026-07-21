@@ -1,6 +1,6 @@
 # Given numRows, generate the first numRows rows of Pascal's Triangle where each element is the sum of the two numbers directly above it.
 # Time Complexity = O(n²), Space Complexity = O(n²), Auxiliary Space = O(n)
-# Leetcode = 118
+# Leetcode = 118,119
 
 numRows = int(input("Enter the number of row :"))
 
