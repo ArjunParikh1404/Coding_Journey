@@ -26,4 +26,4 @@ while fast < len(nums):
         slow += 1
         size -= 1
         
-print(op)
+print(0 if op == float('inf') else op)
