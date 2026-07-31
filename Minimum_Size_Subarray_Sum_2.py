@@ -1,5 +1,5 @@
 # Given an array of positive integers and a target sum, find the length of the smallest contiguous subarray whose sum is greater than or equal to the target; return 0 if no such subarray exists.
-# Time Complexity = (O(n log n)), Space Complexity = O(1)
+# Time Complexity = (O(n log n)), Space Complexity = O(n)
 # Leetcode = 209
 
 from bisect import bisect_left
