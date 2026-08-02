@@ -1,6 +1,6 @@
 # Given a non-negative integer rowIndex, return the rowIndexth (0-indexed) row of Pascal’s Triangle.
 # Time Complexity = O(n²), Space Complexity = O(n²), Auxiliary Space = O(n)
-# Leetcode = 119
+# Leetcode = 119 / 118
 
 rowIndex = int(input("Enter the row index : "))
 
