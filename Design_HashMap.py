@@ -1,4 +1,4 @@
-# Design a HashSet from scratch that supports add, remove, and contains operations without using a built-in hash table.
+# Design a HashMap without using any built-in hash table libraries.
 # Time Complexity = O(1), Space Complexity = O(n)
 # Leetcode = 705
 
