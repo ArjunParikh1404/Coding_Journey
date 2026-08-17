@@ -3,14 +3,18 @@
 # Leetcode = 706
 
 class HashMap:
+    
+    # Implementiong HashMap
     def __init__(self, capacity=10):
-        self.capacity = capacity
-        self.size = 0
-        self.buckets = [[] for _ in range(capacity)]
+        self.capacity = capacity    # Length of HashMap
+        self.size = 0   # how many key-value pair we stored
+        self.buckets = [[] for _ in range(capacity)]    # makes empty buckets 
 
+    # Choosing key(index)
     def _hash(self, key):
         return hash(key) % self.capacity
 
+    # Store this key and value
     def put(self, key, value):
         index = self._hash(key)
         bucket = self.buckets[index]
