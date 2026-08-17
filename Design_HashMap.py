@@ -1,6 +1,6 @@
 # Design a HashMap without using any built-in hash table libraries.
 # Time Complexity = O(1), Space Complexity = O(n)
-# Leetcode = 705
+# Leetcode = 706
 
 class HashMap:
     def __init__(self, capacity=10):
