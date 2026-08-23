@@ -8,7 +8,6 @@ hashset.add(2)
 hashset.add(1)
 hashset.update([4,5,6]) # For multiple
 hashset.update({4,5,6}) # For multiple
-
 print(hashset)
 
 # remove a key
