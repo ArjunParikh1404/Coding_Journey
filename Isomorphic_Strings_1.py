@@ -4,7 +4,6 @@
 
 s = str(input("Enter the first string :"))
 t = str(input("Enter the second string :"))
-
 mapst = {}
 mapts = {}
 
