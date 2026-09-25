@@ -3,7 +3,6 @@
 # Leetcode = 599
 
 list1 = list(map(str, input("Enter the first list :").split()))
-
 list2 = list(map(str, input("Enter the second list :").split()))
 
 map1 = {}
