@@ -18,7 +18,6 @@ def split(arr):
 
   return merge(left, right)
 
-
 def merge(left, right):
   sorted_arr = []
   i = j = 0
@@ -35,7 +34,6 @@ def merge(left, right):
   sorted_arr.extend(right[j:])
 
   return sorted_arr
-
 
 nums = split(nums)
 print(nums)
