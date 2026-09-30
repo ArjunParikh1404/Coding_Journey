@@ -23,5 +23,4 @@ def qucik_sort(arr):
     return left + [arr[0]] + right
     
 nums = qucik_sort(nums)
-
 print(nums)
