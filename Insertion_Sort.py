@@ -9,6 +9,5 @@ for i in range(1,len(nums)):
     while nums[a - 1] > nums[a] and a > 0:
         nums[a - 1], nums[a] = nums[a], nums[a - 1]
         
-        a -= 1
-        
+        a -= 1     
 print(nums)
