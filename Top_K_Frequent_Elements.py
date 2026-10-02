@@ -31,5 +31,4 @@ for i in range(len(buckets) - 1, 0, -1):
 
     if len(result) == k:
         break
-
 print("Top", k, "frequent elements:", result)
