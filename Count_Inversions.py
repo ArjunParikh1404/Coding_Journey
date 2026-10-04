@@ -21,7 +21,6 @@ def split(arr):
 
     return merged, total_count
 
-
 def merge(left, right):
     sorted_arr = []
     i = j = 0
