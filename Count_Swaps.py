@@ -1,7 +1,6 @@
 # Sort an array in Bubble Sort and count the number of swaps.
 # Time Complexity = O(n²), Space Complexity = O(1)
 
-
 nums = list(map(int, input("Enter the array : ").split()))
 
 swaps = 0
