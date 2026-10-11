@@ -2,6 +2,7 @@
 # Time Complexity = O(n²), Space Complexity = O(1)
 
 students = []
+
 n = int(input("Enter number of students : "))
 
 for i in range(n):
