@@ -2,7 +2,6 @@
 # Time Complexity = O(n²), Space Complexity = O(1)
 
 nums = list(map(int, input("Enter the list: ").split()))
-
 n = len(nums)
 
 for i in range(n):
