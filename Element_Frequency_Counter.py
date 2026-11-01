@@ -2,7 +2,6 @@
 # Time Complexity = O(n), Space Complexity = O(n)
 
 nums = list(map(int, input("Enter the List:").split()))
-
 hset = {}
 
 for i in nums:
