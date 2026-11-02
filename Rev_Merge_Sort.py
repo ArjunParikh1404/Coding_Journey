@@ -32,5 +32,4 @@ def merge(left, right):
     return result
     
 nums = split(nums)
-
 print(nums)
