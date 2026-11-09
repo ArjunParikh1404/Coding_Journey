@@ -23,14 +23,12 @@ def counting(arr, exp):
 
     return op
 
-
 def radix(arr):
 
     for i in range(len(str(max(arr)))):
         arr = counting(arr, i)
 
     return arr
-
 
 def maximumGap(nums):
 
